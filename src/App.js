@@ -6,6 +6,8 @@ import Sidebar from "./components/Sidebar";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import EmployeeDashboard from "./pages/employee/EmployeeDashboard";
+import Leaves from "./pages/Leaves";
+import Salary from "./pages/Salary";
 
 const DashboardRedirect = () => {
   const { user } = useAuth();
@@ -40,6 +42,22 @@ function App() {
               element={
                 <Layout>
                   <EmployeeDashboard />
+                </Layout>
+              }
+            />
+            <Route
+              path="/leaves"
+              element={
+                <Layout>
+                  <Leaves />
+                </Layout>
+              }
+            />
+            <Route
+              path="/salary"
+              element={
+                <Layout>
+                  <Salary />
                 </Layout>
               }
             />
